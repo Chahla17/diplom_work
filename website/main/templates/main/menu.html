@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block title %} Меню {% endblock %} {% block content %}
+<h1>Меню кафе</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card">
+            <img src="main\templates\main\img\grech.jpg.jpg" , width="150" , height="350" , class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Салат "Греческий"</h5>
+                <p class="card-text">Состав: помидоры, огурцы свежие, лук красный, перец болгарский, сыр фета, оливки, маслины чёрные, лимон, масло оливковое, соль, перец чёрный молотый.</p>
+                <form id="form_buying_product" class="form-inline">
+                    <input type="number" class="form-control" name="number" id="number">
+                    <button type="submit" id="submit_btn" class="btn btn-outline-danger btn-buy" data-product_id="{{product.id}}" data-name="{{product.name}}">В корзину</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

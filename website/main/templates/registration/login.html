@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="w-100 d-flex justify-content-center">
+  <div class="w-75 card shadow p-5 m-5">
+    <form method="post">
+      {% csrf_token %}{{form|crispy}}
+
+      <button type="submit" class="btn btn-outline-danger">Войти</button>
+      <br>
+      <button type="submit" class="btn btn-outline-light" href='/admin/'>Администратор</button>
+      <p align="center">Еще нет аккаунта? <a style="color:#FF0000; " href="{% url 'sign_up' %}">Зарегестрироваться</a></p>
+    </form>
+  </div>
+</div>
+{% endblock %}

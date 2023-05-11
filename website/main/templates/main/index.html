@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% block title %} {{ title }} {% endblock %} {% block content %}
+<font face="Impact">
+    <font size="67">
+        <h1 align="center"><br>КАФЕ-БАР<br>"ТАЙМ-АУТ"</h1>
+    </font>
+</font>
+<div class="container_slider_css d-flex justify-content-center">
+    <img class="photo_slider_css" src="main\templates\main\img\f1.jpg.jpg" a alt="">
+    <img class="photo_slider_css" src="main\templates\main\img\f2.jpg.jpg" alt="">
+    <img class="photo_slider_css" src="main\templates\main\img\f3.jpg.jpg" alt="">
+    <img class="photo_slider_css" src="main\templates\main\img\f4.jpg.jpg" alt="">
+    <style>
+        .container_slider_css {
+            width: 100%;
+            height: 570px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .photo_slider_css {
+            position: absolute;
+            animation: round 16s infinite;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @keyframes round {
+            25% {
+                opacity: 1
+            }
+            40% {
+                opacity: 0
+            }
+        }
+        
+        img:nth-child(1) {
+            animation-delay: 12s
+        }
+        
+        img:nth-child(2) {
+            animation-delay: 8s
+        }
+        
+        img:nth-child(3) {
+            animation-delay: 4s
+        }
+        
+        img:nth-child(4) {
+            animation-delay: 0
+        }
+        
+        @media(min-width:0px) and (max-width:320px) {
+            .container_slider_css {
+                width: 80%;
+                height: 190px
+            }
+        }
+        
+        @media(min-width:321px) and (max-width:480px) {
+            .container_slider_css {
+                width: 80%;
+                height: 190px
+            }
+        }
+    </style>
+</div>
+<font face="Comic Sans MS">
+    <font size="5">
+        <p align="center"> Кафе "Тайм-аут" расположено в городе Ржеве и является одним из самых популярных заведений в городе. Кафе "Тайм-аут" предлагает своим гостям уютную атмосферу, вкусную еду и широкий выбор напитков. Цены в "Тайм-аут" немного выше среднего, но оправдываются
+            качеством еды и обслуживания. Официанты дружелюбные и внимательные, быстро реагируют на просьбы гостей.<br>
+            <br> Кафе "Тайм-аут" является отличным местом для проведения званых и не очень званых встреч, романтических свиданий или работы за ноутбуком. Если вы находитесь в Ржеве, то обязательно загляните в "Тайм-аут" и попробуйте их блюда и напитки.<br>
+            <br> В меню можно найти разнообразные блюда европейской и русской кухни: салаты, бургеры, сэндвичи, супы, пасту, пиццу и десерты. Напитки также представлены в широком ассортименте: от кофе и чая до алкогольных и безалкогольных коктейлей.
+    </font>
+</font>
+</p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Забронировать стол
+{% endblock %}
+
+{% block content %}
+    <h1>Забронировать стол</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.title }}<br>
+
+
+      <button type="submit" class="btn btn-success">Забронировать</button>
+      <span>{{ error }}</span>
+    </form>
+{% endblock %}
